@@ -3,7 +3,7 @@
 Plugin Name: Tags Without Links
 Plugin URI: http://tommcfarlin.com/tags-without-links/
 Description: A simple plugin used to make it easy to display tags without links.
-Version: 1.0
+Version: 1.1
 Author: Tom McFarlin
 Author URI: http://tommcfarlin.com/
 Author Email: tom@tommcfarlin.com
@@ -25,6 +25,10 @@ License:
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
   
 */
+
+if( ! defined( 'TAGS_WITHOUT_LINKS_VERSION' ) ) {
+	define ( 'TAGS_WITHOUT_LINKS_VERSION', 1.1 );
+} // en dif
 
 /**
  * Loops through the existing tags and then echoes them back out to the page
