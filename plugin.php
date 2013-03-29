@@ -47,16 +47,17 @@ function the_tags_without_links( $sep = ' ' ) {
  */
 function get_the_tags_without_links( $sep = ' ' ) {
 	
-	$str_tags = '';
+	//$str_tags = '';
+	$tags_list = array();
 	
-	if( ( $tags = get_the_tags() ) ) {
-	
-		foreach( $tags as $tag ) {
-			$str_tags .= 1 < count( $tags ) ? $tag->name . $sep : $tag->name;
+	if ( ( $tags = get_the_tags() ) ) {
+		
+		foreach ( $tags as $tag ) {
+			$tags_list[] = $tag->name;
 		} // end foreach
 	
 	} // end if
 	
-	return $str_tags;
+	return implode( $sep, $tags_list );
 	
 } // end the_tags_without_links
