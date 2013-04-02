@@ -36,8 +36,8 @@ This plugin is targeted primarily for developers to make it easier for developer
 
 The plugin includes two functions:
 
-* `the_tags_without_the_links()` that will echo the tags for the associated post back to the template
-* `get_the_tags_without_the_links()` that will return the string of tags back to the template invoking the call.
+* `wp_the_tags_without_the_links()` that will echo the tags for the associated post back to the template
+* `wp_get_the_tags_without_the_links()` that will return the string of tags back to the template invoking the call.
 
 Each function acceptions an optional parameter that can be used to separate each tag with the default separator being a space.
 
