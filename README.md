@@ -11,7 +11,7 @@
 
 * Requires at least: 3.5.1
 * Tested up to: 3.5.1
-* Stable Tag: 1.1
+* Stable Tag: 1.2
 
 ## License 
 
@@ -69,6 +69,10 @@ No - the plugin is primarily written for developers to easily render tags withou
 There are no strings to localize :).
 
 ## Changelog
+
+### 1.2
+* Removing a commented line of code
+* Prefixing the functions with `wp`
 
 ### 1.1
 * Merging pull request for cleaning up the code
