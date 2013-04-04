@@ -11,7 +11,7 @@
 
 * Requires at least: 3.5.1
 * Tested up to: 3.5.1
-* Stable Tag: 1.2
+* Stable Tag: 1.3
 
 ## License 
 
@@ -70,11 +70,17 @@ There are no strings to localize :).
 
 ## Changelog
 
+### 1.3
+
+* Changing the function prefix from `wp` to `twl`
+
 ### 1.2
+
 * Removing a commented line of code
 * Prefixing the functions with `wp`
 
 ### 1.1
+
 * Merging pull request for cleaning up the code
 * Removing whitespace at the end of the plugin file
 * Defining a constant for the version of the plugin
