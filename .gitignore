@@ -1,0 +1,30 @@
+# WordPress
+index.php
+xmlrpc.php
+readme.html
+license.txt
+wp-*
+!wp-content
+wp-content/*
+
+!wp-content/plugins/
+wp-content/plugins/*
+
+!wp-content/mu-plugins/
+wp-content/mu-plugins/*
+!wp-content/mu-plugins/_composer_autoload.php
+!wp-content/mu-plugins/deca/
+
+!wp-content/themes/
+wp-content/themes/*
+
+!wp-config-sample-development.php
+
+# Application
+*.dist
+*.locke
+.php_cs.cache
+vendor/
+
+# PHPUnit
+coverage-report/*
