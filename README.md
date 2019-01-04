@@ -1,90 +1,87 @@
 # Tags Without Links
 
-## Plugin Meta
-
-* [Tom McFarlin](http://tommcfarlin.com)
-* [Donate](http://tommcfarlin.com/donate/)
-* [Homepage](http://tommcfarlin.com/tags-without-links/)
-* Tags: tags
-
 ## Requirements
 
 * Requires at least: 3.5.1
-* Tested up to: 3.5.1
-* Stable Tag: 1.3
+* Tested up to: 5.0.2
+* Stable Tag: 1.4
 
-## License 
+## About
 
-> This program is free software; you can redistribute it and/or modify
-  it under the terms of the GNU General Public License, version 2, as 
-  published by the Free Software Foundation.
+Easily to display tags without links.
 
-> This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+## Instructions
 
-> You should have received a copy of the GNU General Public License
-  along with this program; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-  
-[License URI](http://www.gnu.org/licenses/gpl-2.0.html)
+### Note
 
-## Plugin Description
+This plugin is targeted primarily for developers to make it easier to display tags without any links associated with them.
 
-This plugin is targeted primarily for developers to make it easier for developers to display tags without any links associated with them.
+### How To Use This Plugin
 
-The plugin includes two functions:
+1. In your template, create an instance of the plugin by instantiating the class.
+    - You may want to place the `use TomMcFarlin;` statement at the top of your file.
+    - If not, you can instantiate the plugin by using `TomMcFarlin\TagsWithoutLinks(' | ')`
+2. Make sure you specify a separator in the constructor the class.
+3. Use the `display()` function to automatically echo the results of the function.
+4. Use the `get()` function to read the contents into a variable that you can use later.
 
-* `wp_the_tags_without_the_links()` that will echo the tags for the associated post back to the template
-* `wp_get_the_tags_without_the_links()` that will return the string of tags back to the template invoking the call.
+### An Example
 
-Each function acceptions an optional parameter that can be used to separate each tag with the default separator being a space.
+Note that before reading the examples below, if you need to place the output of the plugin into an attribute, if it contains HTML, or simply requires any type of sanitization, remember to use
+the appropriate [WordPress Escape Function](https://security.stackexchange.com/questions/199372/are-esc-functions-enough-safe-in-wordpress-like-esc-url-esc-attr-esc-title).
 
+##### Using display()
+
+In your template, enter something like the following:
+
+```php
+use TomMcFarlin;
+
+// Other code here...
+
+$tagsWithoutLinks = new TagsWithoutLinks(' | ' );
+$tagsWithoutLinks->display();
+
+// Other code here...
+```
+
+##### Using get()
+
+In your template, enter something like the following:
+
+```php
+use TomMcFarlin;
+
+// Other code here...
+
+$tagsWithoutLinks = new TagsWithoutLinks(',');
+$tags = $tagsWithoutLinks->get();
+
+// Other code here...
+
+echo $tags;
+
+// Other code here...
+```
 
 ## Installation
 
 ### Using The WordPress Dashboard
 
 1. Navigate to the 'Add New' plugin dashboard
-2. Select `master.zip` from your computer
+2. Select `tags-without-links.zip` from your computer (you may need to rename `master.zip`)
 3. Upload
 4. Activate the plugin in the WordPress Plugin Dashboard
 
 ### Using FTP
 
-1. Extract `master.zip` to your computer
+1. Extract `tags-without-links.zip` to your computer
 2. Upload the `tags-without-links` directory to your `wp-content/plugins` directory
 3. Navigate to the WordPress Plugin Dashboard
 4. Activate the plugin from this page
 
-## Frequently Asked Questions
+## Other Notes
 
-### Is the a user interface for this plugin?
-
-No - the plugin is primarily written for developers to easily render tags without links in their page templates.
-
-### Why isn't this plugin localized?
-
-There are no strings to localize :).
-
-## Changelog
-
-### 1.3
-
-* Changing the function prefix from `wp` to `twl`
-
-### 1.2
-
-* Removing a commented line of code
-* Prefixing the functions with `wp`
-
-### 1.1
-
-* Merging pull request for cleaning up the code
-* Removing whitespace at the end of the plugin file
-* Defining a constant for the version of the plugin
-
-### 1.0
-
-* Initial Release
+* This plugin requires PHP 7.1.
+* This plugin uses Composer for code quality but it's not required to run in production.
+* This is a freely available plugin. I do not guarantee support for it.

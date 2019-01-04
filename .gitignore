@@ -21,8 +21,8 @@ wp-content/themes/*
 !wp-config-sample-development.php
 
 # Application
-*.dist
-*.locke
+*.cache
+*.lock
 .php_cs.cache
 vendor/
 
