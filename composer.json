@@ -1,0 +1,42 @@
+{
+    "name": "tags-without-links/tags-without-links",
+    "description": "TODO",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "homepage": "https://github.com/tommcfarlin/tags-without-links",
+    "authors": [
+      {
+        "name": "Tom McFarlin",
+        "email": "tom@tommcfarlin.com",
+        "homepage": "https://tommcfarlin.com"
+      }
+    ],
+    "support": {
+      "issues": "https://github.com/tommcfarlin/tags-without-links/issues"
+    },
+    "config": {
+      "preferred-install": "dist",
+      "platform": {
+          "php": "7.2"
+      }
+    },
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://wpackagist.org"
+      }
+    ],
+    "require": {
+      "php": "7.2",
+      "composer/installers": "^1.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.13.1",
+        "jakub-onderka/php-parallel-lint": "^1.0.0",
+        "phpmd/phpmd": "^v2.6.0",
+        "nikic/php-parser": "^4.0",
+        "ocramius/proxy-manager": "^2.0.0",
+        "phpro/grumphp": "^0.13.1"
+    },
+    "minimum-stability": "stable"
+  }
